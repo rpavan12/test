@@ -1,21 +1,8 @@
-pipeline {
-    agent any
+@Library('jenkins-shared-library')_
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-            }
-        }
-    }
-}
+def configMap = [
+    project: "expense",
+    component: "backend"
+]
+
+echo "$env.BRANCH_NAME"
