@@ -77,14 +77,14 @@ pipeline {
     }
     post { 
         always { 
-            echo 'It will always say Hello again!'
+            echo 'I will always say Hello again!'
             deleteDir()
         }
         failure { 
-            echo 'It will run when pipeline is failed'
+            echo 'I will run when pipeline is failed'
         }
         success { 
-            echo 'It will run when pipeline is success'
+            echo 'I will run when pipeline is success'
         }
     }
 }
